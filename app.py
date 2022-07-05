@@ -37,10 +37,10 @@ else:
     prediction = import_and_predict(image, model)
     
     if prediction> 0.5:
-        st.write("Other type of pox")
-        st.write(prediction)
+        st.write("It might be Monkeypox. You should visit a specialist immediately. Thank you.")
+        st.write((1-prediction))
     else:
-        st.write("Monkey-pox")
+        st.write("It's most probably not monkeypox, but still you should visit a skin specialist. Thank you.")
         st.write((1-prediction))
     
     
