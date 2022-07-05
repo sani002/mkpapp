@@ -1,8 +1,12 @@
 import tensorflow as tf
-
-model = tf.keras.models.load_model('model/mkp02.h5')
-
 import streamlit as st
+import cv2
+from PIL import Image, ImageOps
+import numpy as np
+
+model = tf.keras.models.load_model('mkp02.h5')
+
+
 
 font="century gothic"
 
@@ -12,9 +16,6 @@ st.write("""
 st.write("Check on the go")
 file = st.file_uploader("Please upload an image file", type=["jpg", "png","jpeg","bmp"])
 
-import cv2
-from PIL import Image, ImageOps
-import numpy as np
 
 def import_and_predict(image_data, model):
     
