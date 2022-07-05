@@ -37,7 +37,7 @@ else:
     st.image(image, use_column_width=True)
     prediction = import_and_predict(image, model)
     
-    if prediction> 0.5:
+    if prediction< 0.5:
         st.write("It might be Monkeypox. You should visit a specialist immediately. Thank you.")
         st.write((1-prediction))
     else:
